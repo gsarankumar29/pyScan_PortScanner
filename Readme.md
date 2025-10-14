@@ -64,7 +64,7 @@ python3 port_scanner.py <target> [-p1 <start_port>] [-p2 <end_port>]
 Scan common ports (default behavior if your script uses defaults):
 
 ```bash
-python3 port_scanner.py 192.168.1.10
+python3 port_scanner.py IP
 ```
 
 Scan a custom range:
@@ -78,7 +78,7 @@ python3 port_scanner.py scanme.nmap.org -p1 1 -p2 1024
 ## Example Output (illustrative)
 
 ```
-Target: scanme.nmap.org (93.184.216.34)
+Target: scanme.nmap.org (IP)
 Scanning ports 1 - 1024
 [+] Port 22: OPEN
 [+] Port 80: OPEN
