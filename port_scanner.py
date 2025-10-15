@@ -34,18 +34,14 @@ def port_scan(target_ip, port):
         s.close()
 
 def worker(q, target_ip):
-    """
-    Worker function for threading. Takes ports from the queue and scans them.
-    """
+    
     while not q.empty():
         port = q.get()
         port_scan(target_ip, port)
         q.task_done()
 
 def main():
-    """
-    Main function to parse arguments and initiate the scan.
-    """
+    
     parser = argparse.ArgumentParser(description="Pyscan: A simple TCP Port Scanner.")
     parser.add_argument("target", help="The target IP address or hostname (e.g., 127.0.0.1 or example.com)")
     parser.add_argument("-p1", "--start_port", type=int, default=1, help="Starting port number (default: 1)")
